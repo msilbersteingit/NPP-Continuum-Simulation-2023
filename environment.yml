@@ -1,0 +1,33 @@
+name: npp-continuum-simulation-2023
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Interpreter/kernels
+  - python
+  - ipykernel
+  - spyder-kernels
+  # Scientific computing
+  - numpy = 1.24.3
+  - pandas
+  - openpyxl
+  - mpi4py
+  - scipy
+  - petsc4py
+  #- fipy
+  # Visualization
+  - matplotlib
+  - ipympl
+  - bokeh=3.3.0
+  # Utility/io
+  - pytables
+  - dotmap
+  - pip
+  - pip:
+    - git+https://github.com/Maxwellfire/fipy.git@propogate_boundary_conditions_to_old
+    - -e ./nppsolver
+    - -e ./Scripts/
+    - -e ./simulation_cases
+    - pandas-bokeh
+ #- petsc4py=3.18.3

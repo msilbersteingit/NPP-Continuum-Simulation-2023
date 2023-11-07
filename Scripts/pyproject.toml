@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "scripts"
+authors = [
+    {name = "Max Tepermeister", email = "mt845@cornell.edu"},
+]
+description = "Helper scripts"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["version"]
+
+
+[tool.setuptools]
+packages = ["plotting"]
